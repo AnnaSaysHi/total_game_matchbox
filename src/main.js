@@ -2,13 +2,17 @@ let config = {
     type: Phaser.AUTO,
     width: 640,
     height: 480,
-    scene: [Menu, RocketPatrol, Pong]
+    scene: [Menu, Snake]
 }
 
 //reserve keyboard vars
-let keyF, keyR, keyLEFT, keyRIGHT, keyUP, keyDOWN, keyY, keyN;
+let keyF, keyR, keyLEFT, keyRIGHT, keyUP, keyDOWN, keyY, keyN, keySPACE;
 
 let game = new Phaser.Game(config);
+
+let getCookie;
+let setCookie;
+let checkCookie;
 
 // set UI sizes
 let borderUISize = game.config.height / 15;
